@@ -1,0 +1,5 @@
+# commit을 하지 않을 목록
+.settings
+bin
+.classpath
+.project
