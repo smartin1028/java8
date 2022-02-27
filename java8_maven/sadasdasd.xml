@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property resource="/xs/core/config/property/test.properties"/>
+
+	<!-- 요청정보 파일 로그 Appender -->
+    <appender name="request" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./requestLog.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./requestLog-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+
+    <!-- log 출력 클래스 정의 -->
+    <logger name="requestLogger" level="info" additivity="false">
+        <appender-ref ref="request" />
+
+    </logger>
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="sqlLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="sql" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="sqlDelayLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="sqldelay" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="exceptionLogger" level="error" additivity="false">-->
+<!--        <appender-ref ref="console" />-->
+<!--        <appender-ref ref="exception" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="rmqLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="rabbitmq" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="esLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="elasticsearch" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="clientLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="client" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="interfaceLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="interface" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="restLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="rest" />-->
+<!--    </logger>-->
+<!--    -->
+<!--    &lt;!&ndash; log 출력 클래스 정의 &ndash;&gt;-->
+<!--    <logger name="userLogger" level="info" additivity="false">-->
+<!--        <appender-ref ref="user" />-->
+<!--    </logger>-->
+<!--     -->
+    <root level="info">
+<!--        <appender-ref ref="sql" />-->
+        <appender-ref ref="console" />
+        <appender-ref ref="request" />
+<!--        <appender-ref ref="rootFileLog" />-->
+    </root> 
+</configuration>

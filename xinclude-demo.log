@@ -1,0 +1,42 @@
+2022-02-27 20:50:05,053 ERROR c.e.MyTest [main] logger00 Hello, World!
+2022-02-27 20:50:05,058 ERROR c.e.MyTest [main] logger01 Hello, World!
+2022-02-27 20:50:05,058 INFO c.e.MyTest [main] logger02 Hello, World!
+2022-02-27 20:50:05,058 INFO c.e.MyTest [main] We've just greeted the user!
+2022-02-27 20:50:05,058 WARN c.e.MyTest [main] We've just greeted the user!
+2022-02-27 20:50:05,058 ERROR c.e.MyTest [main] We've just greeted the user!
+2022-02-27 20:50:05,059 FATAL c.e.MyTest [main] We've just greeted the user!
+2022-02-27 20:53:03,043 ERROR com.ex01.MyTest [main] logger00 Hello, World!
+2022-02-27 20:53:03,045 ERROR com.ex01.MyTest [main] logger01 Hello, World!
+2022-02-27 20:53:03,045 INFO com.ex01.MyTest [main] logger02 Hello, World!
+2022-02-27 20:53:03,045 INFO com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:53:03,045 WARN com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:53:03,045 ERROR com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:53:03,045 FATAL com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:14,716 ERROR com.ex01.MyTest [main] logger00 Hello, World!
+2022-02-27 20:56:14,718 ERROR com.ex01.MyTest [main] logger01 Hello, World!
+2022-02-27 20:56:14,718 INFO com.ex01.MyTest [main] logger02 Hello, World!
+2022-02-27 20:56:14,718 INFO com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:14,718 WARN com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:14,718 ERROR com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:14,718 FATAL com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:45,746 ERROR com.ex01.MyTest [main] logger00 Hello, World!
+2022-02-27 20:56:45,748 ERROR com.ex01.MyTest [main] logger01 Hello, World!
+2022-02-27 20:56:45,749 INFO com.ex01.MyTest [main] logger02 Hello, World!
+2022-02-27 20:56:45,749 INFO com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:45,749 WARN com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:45,749 ERROR com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:56:45,749 FATAL com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:57:18,266 ERROR com.ex01.MyTest [main] logger00 Hello, World!
+2022-02-27 20:57:18,267 ERROR com.ex01.MyTest [main] logger01 Hello, World!
+2022-02-27 20:57:18,267 INFO com.ex01.MyTest [main] logger02 Hello, World!
+2022-02-27 20:57:18,267 INFO com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:57:18,268 WARN com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:57:18,268 ERROR com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:57:18,268 FATAL com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:59:54,563 ERROR com.ex01.MyTest [main] logger00 Hello, World!
+2022-02-27 20:59:54,566 ERROR com.ex01.MyTest [main] logger01 Hello, World!
+2022-02-27 20:59:54,566 INFO com.ex01.MyTest [main] logger02 Hello, World!
+2022-02-27 20:59:54,566 INFO com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:59:54,566 WARN com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:59:54,566 ERROR com.ex01.MyTest [main] We've just greeted the user!
+2022-02-27 20:59:54,566 FATAL com.ex01.MyTest [main] We've just greeted the user!
