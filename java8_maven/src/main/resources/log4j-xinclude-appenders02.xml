@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appenders>
-    <Console name="STDOUT">
-        <PatternLayout pattern="%m%n" />
-    </Console>
-    <File name="File" fileName="${filename}" bufferedIO="true" immediateFlush="true">
-        <PatternLayout>
-            <pattern>%d %p %C [%t] %m%n</pattern>
-<!--            <pattern>%d %p %C{1.} [%t] %m%n</pattern>-->
-        </PatternLayout>
-    </File>
 
+    <Console name="STDOUT02">
+        <PatternLayout pattern="%m%n"/>
+        <ThresholdFilter level="debug"/>
+    </Console>
+    <Routing name="Routing">
+        <Routes pattern="$${sd:type}">
+            <Route>
+                <RollingFile name="Rolling-${sd:type}" fileName="${baseDir}/${filename02}"
+                             filePattern="${baseDir}/rolling1/test1-${sd:type}.%i.log.gz">
+                    <PatternLayout>
+<!--                        <pattern>%d %p %c{1.} [%t] %m%n</pattern>-->
+                        <pattern>%d %p %c [%t] %m%n</pattern>
+                    </PatternLayout>
+                    <SizeBasedTriggeringPolicy size="5KB" />
+                </RollingFile>
+            </Route>
+            <Route ref="STDOUT02" key="Audit"/>
+        </Routes>
+    </Routing>
 </appenders>

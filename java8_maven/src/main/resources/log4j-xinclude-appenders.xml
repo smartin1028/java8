@@ -3,7 +3,7 @@
     <Console name="STDOUT">
         <PatternLayout pattern="%m%n" />
     </Console>
-    <File name="File" fileName="${filename}" bufferedIO="true" immediateFlush="true">
+    <File name="File" fileName="${baseDir}/${filename}" bufferedIO="true" immediateFlush="true">
         <PatternLayout>
             <pattern>%d %p %C [%t] %m%n</pattern>
 <!--            <pattern>%d %p %C{1.} [%t] %m%n</pattern>-->

@@ -6,7 +6,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>sqlLog-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>100MB</maxFileSize>
+                <maxFileSize>1KB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
@@ -15,14 +15,14 @@
         </encoder>
     </appender>
 
-    <Properties>
-        <Property name="baseDir">logs</Property>
-    </Properties>
+
     <Appenders>
         <RollingFile name="RollingFile" fileName="${baseDir}/app.log"
                      filePattern="${baseDir}/$${date:yyyy-MM}/app-%d{yyyy-MM-dd}.log.gz">
             <PatternLayout pattern="%d %p %c [%t] %m%n" />
             <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+
+            <maxHistory>7</maxHistory>
             <DefaultRolloverStrategy>
                 <Delete basePath="${baseDir}" maxDepth="2">
                     <IfFileName glob="*/app-*.log.gz" />
@@ -32,24 +32,28 @@
         </RollingFile>
     </Appenders>
 
-    <logger name="org.apache.logging.log4j.test1" level="debug" additivity="false">
-        <ThreadContextMapFilter>
-            <KeyValuePair key="test" value="123" />
-        </ThreadContextMapFilter>
-        <AppenderRef ref="STDOUT" />
-    </logger>
+<!--    <logger name="org.apache.logging.log4j.test1" level="debug" additivity="false">-->
+<!--        <ThreadContextMapFilter>-->
+<!--            <KeyValuePair key="test" value="123" />-->
+<!--        </ThreadContextMapFilter>-->
+<!--        <AppenderRef ref="STDOUT" />-->
+<!--    </logger>-->
 
-    <logger name="org.apache.logging.log4j.test2" level="debug" additivity="false">
-        <AppenderRef ref="File" />
-<!--        <AppenderRef ref="sql" />-->
-    </logger>
-    <logger name="com" level="debug" additivity="false">
-        <AppenderRef ref="RollingFile" />
-        <!--        <AppenderRef ref="sql" />-->
-    </logger>
+<!--    <logger name="org.apache.logging.log4j.test2" level="debug" additivity="false">-->
+<!--        <AppenderRef ref="File" />-->
+<!--&lt;!&ndash;        <AppenderRef ref="sql" />&ndash;&gt;-->
+<!--    </logger>-->
+<!--    <logger name="com" level="debug" additivity="false">-->
+<!--        <AppenderRef ref="RollingFile" />-->
+<!--        &lt;!&ndash;        <AppenderRef ref="sql" />&ndash;&gt;-->
+<!--    </logger>-->
+
     <root level="info">
-        <AppenderRef ref="STDOUT" />
-        <AppenderRef ref="File" />
-        <AppenderRef ref="RollingFile1" />
+<!--        <AppenderRef ref="STDOUT" />-->
+<!--        <AppenderRef ref="File" />-->
+<!--        <AppenderRef ref="RollingFile1" />-->
+<!--        <AppenderRef ref="sql"/>-->
+        <AppenderRef ref="STDOUT02"/>
+        <AppenderRef ref="Routing"/>
     </root>
 </loggers>

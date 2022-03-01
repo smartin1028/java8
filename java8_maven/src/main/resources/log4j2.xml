@@ -3,8 +3,13 @@
                status="warn" name="XIncludeDemo">
     <properties>
         <property name="filename">xinclude-demo.log</property>
+        <Property name="baseDir">logs</Property>
+        <property name="filename02">xinclude-demo02.log</property>
     </properties>
+
+
     <ThresholdFilter level="debug"/>
     <xi:include href="log4j-xinclude-appenders.xml" />
     <xi:include href="log4j-xinclude-loggers.xml" />
+    <xi:include href="log4j-xinclude-appenders02.xml" />
 </configuration>
